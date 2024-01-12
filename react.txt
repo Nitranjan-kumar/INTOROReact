@@ -1,0 +1,69 @@
+1. **What is React?**
+   React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React allows developers to create reusable UI components and manage the state of the application efficiently, providing a declarative approach to building interactive user interfaces.
+
+2. **Who made React?**
+   React was developed by a software engineer at Facebook named Jordan Walke. It was later open-sourced by Facebook, making it available for a broader audience to use and contribute to.
+
+3. **What is Babel?**
+   Babel is a JavaScript compiler that allows developers to use the latest ECMAScript features and syntax in their code, even if the environments in which the code runs do not support those features. Babel can also be used to transpile JSX (a syntax extension for JavaScript often used with React) into standard JavaScript.
+
+4. **How does Babel convert HTML code in React into valid code?**
+   Babel does not directly convert HTML code into React code. Instead, it primarily focuses on converting JSX (JavaScript XML) syntax, which is often used in React for describing UI components, into standard JavaScript that browsers can understand. JSX resembles HTML but gets transpiled into JavaScript code.
+
+5. **What is ReactDOM used for? Write an example.**
+   ReactDOM is a package that provides DOM-specific methods for working with React. It is used to render React components into the DOM. Here's a simple example of using ReactDOM to render a React component:
+
+   ```jsx
+   import React from 'react';
+   import ReactDOM from 'react-dom';
+
+   const MyComponent = () => {
+     return <h1>Hello, React!</h1>;
+   };
+
+   ReactDOM.render(<MyComponent />, document.getElementById('root'));
+   ```
+
+6. **What are the packages that you need to import for React to work with?**
+   To work with React, you typically need to import `react` and `react-dom`. The `react` package is for building React components, and the `react-dom` package is for interacting with the DOM. Here's an example of import statements:
+
+   ```jsx
+   import React from 'react';
+   import ReactDOM from 'react-dom';
+   ```
+
+7. **How do you add React to a web application?**
+   To add React to a web application, you need to include the React library and ReactDOM for rendering. You can use tools like npm (Node Package Manager) to install these libraries and then include them in your HTML file or use bundlers like Webpack. Here's a basic example:
+
+   ```html
+   <!-- Include React and ReactDOM from CDN (Content Delivery Network) -->
+   <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+   ```
+
+8. **What is React.createElement?**
+   `React.createElement` is a function used to create React elements, which are the building blocks of React applications. It takes three arguments: the type of the element (a string representing an HTML tag or a React component), optional properties or attributes for the element, and the children of the element. It returns a React element.
+
+9. **What are the three properties that `createElement` accepts?**
+   `React.createElement` accepts three properties:
+
+   - **Type**: The type of the element, which can be a string representing an HTML tag (e.g., 'div') or a React component.
+   - **Props**: An object containing properties or attributes for the element.
+   - **Children**: The child elements or content of the current element.
+
+   Here's an example:
+
+   ```jsx
+   React.createElement('div', { className: 'my-div' }, 'Hello, React!');
+   ```
+
+10. **What is the meaning of render and root?**
+   - **Render**: In the context of React, "render" refers to the process of converting React components into actual HTML elements that can be displayed on the screen. The `ReactDOM.render` method is commonly used to render a React component into the DOM.
+
+   - **Root**: The "root" typically refers to the root DOM element where your React application is mounted. In the context of `ReactDOM.render`, it's the second argument passed to the function, representing the container element in the HTML where your React component will be rendered. For example:
+
+     ```jsx
+     ReactDOM.render(<MyComponent />, document.getElementById('root'));
+     ```
+
+     Here, the root is the element with the ID 'root' in the HTML file.
